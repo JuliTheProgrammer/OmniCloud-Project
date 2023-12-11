@@ -98,13 +98,13 @@ if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
   } else {
     echo "Booking Medium Server";
     //Make the booking process
-    bookServer($server3, $CPU, $RAM, $SSD); //Add server to the booked servers
+    bookServer($server1, $CPU, $RAM, $SSD); //Add server to the booked servers
   }
 
 } else {
   echo "Booking Small Server";
   //Making the booking process
-  bookServer($server2, $CPU, $RAM, $SSD); //Add server to the booked servers
+  bookServer($server1, $CPU, $RAM, $SSD); //Add server to the booked servers
 }
 }
 ?>
