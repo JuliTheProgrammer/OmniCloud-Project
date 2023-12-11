@@ -52,6 +52,42 @@ $SSD = (int) $SSD;
 
 //Can also loop up in array the value of the CPU, RAM, and SSD
 $totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
+
+
+//Programm the logic for the provisioning
+
+//Get data from the php file and decode it
+$serverData = file_get_contents("data.json");
+$serverData = json_decode(json_encode($serverData), true);
+
+//Make classes for each server
+
+class Server {
+  public $type;
+  public $id;
+  public $price;
+  public $cpu;
+  public $ram;
+  public $ssd;
+}
+
+$serverArray = array();
+
+//Loop through the data and assign it to a global variable
+foreach ($serverData as $key => $value) {
+    //Assign it to a object
+    $server = new Server();
+    $server->type = $value['type'];
+    $server->id = $value['id'];
+    $server->price = $value['price'];
+    $server->cpu = $value['cpu'];
+    $server->ram = $value['ram'];
+    $server->ssd = $value['ssd'];
+    //Push the object to the array
+    array_push($serverArray, $server);
+};
+
+echo $serverData->servers[0]->type;
 ?>
 
 <!DOCTYPE html>
