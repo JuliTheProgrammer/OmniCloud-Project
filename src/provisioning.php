@@ -65,11 +65,11 @@ $totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
   <body>
     <main class="container">
       <div class="container-margin-provisioning">
-        <h2 class="provisioning-title">Our Servers, Your Customization</h2>
+        <h2 class="provisioning-title">Unsere Server, deine Auswahl</h2>
         <section class="provisioning-section-container">
           <div class="provisioning-section-container-padding">
             <form method="post" action="provisioning.php" class="provisioning-section">
-              <h3>Choose CPU Cores</h3>
+              <h3>Wähle die CPU-Kern Anzahl</h3>
               <!--Loop through the array and create a checkbox for each option-->
               <?php foreach ($cpuOptions as $key => $value) : ?>
                 <div class="provisioning-checkbox-label-container">
@@ -80,7 +80,7 @@ $totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
                 <?php endforeach; ?> 
             </form>
             <div class="provisioning-section">
-            <h3>Choose RAM Size</h3>
+            <h3>Wähle die RAM grösse</h3>
                 <!--Loop through the array and create a checkbox for each option-->
                 <?php foreach ($ramOptions as $key => $value) : ?>
                   <div class="provisioning-checkbox-label-container">
@@ -91,7 +91,7 @@ $totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
                 <?php endforeach; ?> 
                 </div>
                 <div class="provisioning-section">
-                <h3>Choose SSD Storage</h3>
+                <h3>Wähle die SSD grösse</h3>
                 <!--Loop through the array and create a checkbox for each option-->
                 <?php foreach ($ssdOptions as $key => $value) : ?>
                   <div class="provisioning-checkbox-label-container">
