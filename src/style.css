@@ -6,11 +6,11 @@
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #bcd6e7;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
+  color: #17537a;
 }
 
 .container {
@@ -21,7 +21,7 @@ body {
 }
 
 .container-margin {
-  margin: 25rem 0rem;
+  margin: 10rem 0rem;
 }
 
 a {
@@ -76,7 +76,7 @@ a {
 
 h1 {
   font-family: Roboto;
-  font-size: 6.6875rem;
+  font-size: 14rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -89,7 +89,7 @@ h1 {
 }
 
 .head-description {
-  margin-top: 2rem;
+  margin-top: 9rem;
 
   display: inline-flex;
   flex-direction: column;
@@ -102,11 +102,10 @@ h1 {
 }
 
 .head-description p {
-  width: 37.75rem;
+  width: 60rem;
 
-  color: #000;
-  font-family: Digital Sans Trial;
-  font-size: 1rem;
+  font-family: "Roboto";
+  font-size: 3rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -120,7 +119,15 @@ h1 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
+  font-size: 1.5rem;
+}
+
+.provisioning-container {
+  padding: 0rem 1.5rem;
+  border: 3px solid #113b57;
+  border-radius: 0.5rem;
+
 }
 
 /* Our Customers */
@@ -514,5 +521,3 @@ input[type="number"]:focus {
 
   border: none;
 }
-
-

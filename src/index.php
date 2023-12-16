@@ -39,6 +39,10 @@ $messages = array(
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css"<?php echo time(); ?>" />
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <main class="container">
@@ -55,9 +59,11 @@ $messages = array(
               <a href="dashboared.php" class="l"
                 >Go to Dashboared</a
               >
-              <a href="provisioning.php" class="btn-get-started"
-                >Get Started</a
-              >
+              <div class="provisioning-container">
+                <a href="provisioning.php" class="btn-get-started"
+                  >Get Started</a
+                >
+              </div>
             </div>
           </div>
         </head>
@@ -89,6 +95,7 @@ $messages = array(
               </p>
             </div>
             <p class="our-services-IaaS">IaaS</p>
+            <img src="logos/undraw_server.svg" alt="A image of a person and servers" />
           </div>
         </section>
         <section class="our-prices">

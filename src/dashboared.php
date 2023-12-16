@@ -54,11 +54,11 @@ function bookServer($server, $CPU, $RAM, $SSD) {
   echo $server->ram;
   echo $server->ssd;
 
-  global $bookedServers;
-
+  // Start the session
+  session_start();
   
-    //Add the server to the booked servers
-    array_push($bookedServers, $CPU);
+  // Store form data in session
+  $_SESSION['form_data'] = $server->cpu;
   
   
 
@@ -127,10 +127,10 @@ if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
               <!--diplay the for loop in the html-->
               <?php 
                 //Loop through the data and make a reusable component
-                global $bookedServers;
-                if ($bookedServers != null) {
-                  echo "<p>$bookedServers[0]</p>";
-                }
+                // Retrieve form data from cookie
+                // Retrieve form data from session
+                echo "<p>$formData = $_SESSION['form_data']</p>";
+                
               ?>
             </div>
           </div>
