@@ -97,8 +97,10 @@ $messages = array(
                 pellentesque tempor ac mauris.
               </p>
             </div>
+            <div class="our-services-IaaS-container">
             <p class="our-services-IaaS">IaaS</p>
-            <img src="logos/undraw_server.svg" alt="A image of a person and servers" />
+            </div>
+            
           </div>
         </section>
         <section class="our-prices">

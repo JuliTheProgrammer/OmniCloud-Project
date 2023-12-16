@@ -194,18 +194,16 @@ h2 {
 /*Our Services*/
 
 .our-services {
-  margin-top: 20rem;
+  margin: 10rem 0rem;
+  text-align: center;
 }
 
 .our-services-description {
   margin-top: 2rem;
 
-  display: flex;
-  width: 64rem;
-  padding: 1.625rem 0.8125rem;
+  display: inline-block;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.625rem;
 }
 
 .our-services-description p {
@@ -222,10 +220,16 @@ h2 {
   align-items: flex-start;
   gap: 4.1875rem;
   align-self: stretch;
+  justify-content: center;
+}
+
+.our-services-IaaS-container {
+  margin: 0 auto;
+  align-items: center;
 }
 
 .our-services-IaaS {
-  font-size: 10.66rem;
+  font-size: 16rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
