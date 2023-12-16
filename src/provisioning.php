@@ -49,7 +49,8 @@ $ssdOptions = array(
         <h2 class="provisioning-title">Our Servers, Your Customization</h2>
         <section class="provisioning-section-container">
           <div class="provisioning-section-container-padding">
-            <form method="POST" action="dashboared.php" class="provisioning-section">
+            <form method="POST" action="dashboared.php" class="provisioning-section-form">
+            <div class="provisioning-section">
               <h3>Choose CPU Cores</h3>
               <!--Loop through the array and create a checkbox for each option-->
               <?php foreach ($cpuOptions as $key => $value) : ?>
@@ -59,7 +60,7 @@ $ssdOptions = array(
                   <p><?php echo $value; ?> CHF</p>
                 </div>
                 <?php endforeach; ?> 
-           
+           </div>
             <div class="provisioning-section">
             <h3>Choose RAM Size</h3>
                 <!--Loop through the array and create a checkbox for each option-->
@@ -91,7 +92,7 @@ $ssdOptions = array(
           <!-- <p><?php echo $totalPrice; ?> CHF</p> -->
       </div>
       <div class="confirm-button-container">
-        <input type="submit" name="submit"></input>
+        <button type="submit">Submit</button>
       </div>
       </form>
     </section>
