@@ -120,7 +120,7 @@ $messages = array(
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
                     <label>CPU</label>
-                    <input type="number" name="CPU" placeholder="1"/>
+                    <input type="number" name="CPU" placeholder="1" min=1 max=2/>
                   </div>
                   <p>5 CHF / Core</p>
                 </div>
@@ -128,7 +128,7 @@ $messages = array(
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
                     <label>RAM</label>
-                    <input type="number" name="RAM" placeholder="1" min=1 max=4/>
+                    <input type="number" name="RAM" placeholder="1" min=1 max=2/>
                   </div>
                   <p>5 CHF / Core</p>
                 </div>
@@ -136,7 +136,7 @@ $messages = array(
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
                     <label>SSD</label>
-                    <input type="number" name="SSD" placeholder="1" />
+                    <input type="number" name="SSD" placeholder="1" min=1 max=2 />
                   </div>
                   <p>5 CHF / Core</p>
                 </div>
