@@ -21,7 +21,7 @@ $totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
 $images = array(
   "Google" => "logos/Google.png",
   "Meta" => "logos/Meta.png",
-  "X" => "logos/X.png",
+  "X" => "logos/X2.png",
 );
 
 $messages = array(
@@ -68,6 +68,7 @@ $messages = array(
           </div>
         </head>
         <section class="our-customers">
+          <div class="our-customers-container">
           <h2>Our Customers</h2>
           <div class="customer-figures">
             
@@ -82,6 +83,8 @@ $messages = array(
               ?>
     
           </div>
+          </div>
+         
         </section>
         <section class="our-services">
           <h2>Our Services</h2>
