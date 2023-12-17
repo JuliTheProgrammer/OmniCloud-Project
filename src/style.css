@@ -22,11 +22,12 @@ body {
 h1 {
   font-family: "League Spartan", sans-serif;
   font-size: 20rem;
-  color : #333;
+  color : #1d1d1d;
 }
 
-nav {
-  background-color: #333;
+.main-nav {
+  background-color: #ffffff;
+  color: #333;
   position: fixed;
   top: 0;
   left: 0;
@@ -39,6 +40,10 @@ nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
 }
 
 nav li {
@@ -47,30 +52,29 @@ nav li {
 
 nav li a {
   display: block;
-  color: white;
+  color: #333;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 nav li a:hover {
-  background-color: #111;
+  border-radius: 1rem;
+  background-color: #f0f0f0;
+  color: #202020;
 }
 
 
 footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  border-top: 0.5px solid #ddd;
+  color: #202020;
+  padding: 30px;
   width: 100%;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -80,7 +84,7 @@ footer {
 
 .footer-content li {
   display: inline;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 .footer-content a {
@@ -135,6 +139,27 @@ a {
 
 .btn-my-dashboared:active {
   color: #000;
+}
+
+/* CTA button */
+
+.cta-button-container {
+  margin: 30rem 0rem;
+}
+
+.cta-button {
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.02625rem;
+  background: var(
+    --Linear-Gradient-Yellow-Red,
+    linear-gradient(88deg, #e9d022 -11.09%, #e60b09 122.28%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn-get-started:link {
@@ -413,6 +438,14 @@ input[type="number"] {
 
 input[type="number"]:focus {
   outline: none;
+}
+
+.select-option select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
 }
 
 .our-prices-submit-button {

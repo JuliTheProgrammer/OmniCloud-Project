@@ -44,7 +44,7 @@ $messages = array(
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
-  <nav>
+  <nav class="main-nav">
       <ul>
         <li><img src="logos/omnicloud_logo.png" alt="omnicloud" class="logo"></li>
         <li><a href="index.php">Home</a></li>
@@ -62,8 +62,14 @@ $messages = array(
             Egal ob grosses Unternehmen oder kleines Start-up, OmniCloud bietet hochmoderne Cloud-Lösungen an, 
               die vollständig an ihr Unternehmen angepasst werden können.
             </p>
-            <a href="dashboared.php" class="button">Dashboard</a>
-            <a href="provisioning.php" class="button">Start</a>
+            <div class="head-btn-container">
+              <a href="dashboared.php" class="l"
+                >Go to Dashboared</a
+              >
+              <a href="provisioning.php" class="btn-get-started"
+                >Get Started</a
+              >
+            </div>
           </div>
         </head>
         <section class="our-customers">
@@ -147,7 +153,7 @@ $messages = array(
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
                     <label>SSD</label>
-                    <select name="SSD" onchange="calculatePrice()">
+                    <select class="select-option" name="SSD" onchange="calculatePrice()">
                       <option value="5">10 GB - CHF 5.-</option>
                       <option value="10">20 GB - CHF 10.-</option>
                       <option value="20">40 GB - CHF 20.-</option>
@@ -168,7 +174,11 @@ $messages = array(
             </div>
           </div>
         </section>
+        <div class="cta-button-container">
+          <a href="provisioning.php" class="cta-button">Leg Los!</a>
+        </div>
       </div>
+      
     </main>
     <script src="script.js"></script>
     
