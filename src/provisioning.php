@@ -29,29 +29,10 @@ $ssdOptions = array(
 );
 
 
-$CPU = "";
-$RAM = "";
-$SSD = "";
-
-if (isset($_POST['submit'])) {
-  $CPU = $_POST['CPU'];
-  $RAM = $_POST['RAM'];
-  $SSD = $_POST['SSD'];
-  echo $CPU;
-  echo $RAM;
-  echo $SSD;
-}
-
-
-
-
-// Convert CPU, RAM, and SSD to integers
-$CPU = (int) $CPU;
-$RAM = (int) $RAM;
-$SSD = (int) $SSD;
-
 //Can also loop up in array the value of the CPU, RAM, and SSD
-$totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
+//$totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +59,7 @@ $totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
                   <p><?php echo $value; ?> CHF</p>
                 </div>
                 <?php endforeach; ?> 
-            </form>
+           </div>
             <div class="provisioning-section">
             <h3>Wähle die RAM grösse</h3>
                 <!--Loop through the array and create a checkbox for each option-->
@@ -101,17 +82,18 @@ $totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
                 </div>
                 <?php endforeach; ?> 
                 </div>
-
+                
           </div>
           
         <section>
       <section class="provisioning-bottom-container">
       <div class="provisioning-total-price-container">
-          <p><?php echo $totalPrice; ?> CHF</p>
+          <!-- <p><?php echo $totalPrice; ?> CHF</p> -->
       </div>
       <div class="confirm-button-container">
-        <input type="submit" name="submit"></input>
+        <button type="submit">Submit</button>
       </div>
+      </form>
     </section>
        
     </main>

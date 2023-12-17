@@ -21,7 +21,7 @@ $totalPrice = $CPU * 5 + $RAM * 5 + $SSD * 10;
 $images = array(
   "Google" => "logos/Google.png",
   "Meta" => "logos/Meta.png",
-  "X" => "logos/X.png",
+  "X" => "logos/X2.png",
 );
 
 $messages = array(
@@ -39,6 +39,10 @@ $messages = array(
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css"<?php echo time(); ?>" />
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <main class="container">
@@ -88,6 +92,8 @@ $messages = array(
               ?>
     
           </div>
+          </div>
+         
         </section>
         <section class="our-services">
           <h2>Unsere Services</h2>
@@ -100,7 +106,10 @@ $messages = array(
               die Ihr Unternehmen auf die nächste Stufe heben.
               </p>
             </div>
+            <div class="our-services-IaaS-container">
             <p class="our-services-IaaS">IaaS</p>
+            </div>
+            
           </div>
         </section>
         <section class="our-prices">
@@ -119,7 +128,7 @@ $messages = array(
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
                     <label>CPU</label>
-                    <input type="number" name="CPU" placeholder="1"/>
+                    <input type="number" name="CPU" placeholder="1" min=1 max=2/>
                   </div>
                   <p>5 CHF / Core</p>
                 </div>
@@ -127,7 +136,7 @@ $messages = array(
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
                     <label>RAM</label>
-                    <input type="number" name="RAM" placeholder="1" min=1 max=4/>
+                    <input type="number" name="RAM" placeholder="1" min=1 max=2/>
                   </div>
                   <p>5 CHF / Core</p>
                 </div>
@@ -135,7 +144,7 @@ $messages = array(
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
                     <label>SSD</label>
-                    <input type="number" name="SSD" placeholder="1" />
+                    <input type="number" name="SSD" placeholder="1" min=1 max=2 />
                   </div>
                   <p>5 CHF / Core</p>
                 </div>
