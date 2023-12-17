@@ -57,110 +57,20 @@ a {
   color: #000;
 }
 
-/*Button -> Dashboard & Start Design + Hover Effect*/
-#containerButton1 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "main";
+.btn-get-started:link {
+  display: inline-flex;
+  padding: 1rem 1.3125rem;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
+  gap: 1.25rem;
+
+  border-radius: 0.375rem;
+  border: 1px solid
+    var(
+      --Linear-Gradient-Yellow-Red,
+      linear-gradient(88deg, #e9d022 -11.09%, #e60b09 122.28%)
+    );
 }
-#containerButton1 button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
-  width: 12rem;
-  height: auto;
-  margin: 1.5em;
-}
-
-#containerButton1 button.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: #282936;
-  border-radius: 1.625rem;
-}
-
-#containerButton1 button.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-
-#containerButton1 button.learn-more .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-
-#containerButton1 button.learn-more .circle .icon.arrow::before {
-  position: absolute;
-  content: '';
-  top: -0.25rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  transform: rotate(45deg);
-}
-
-#containerButton1 button.learn-more .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
-  color: #282936;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-#containerButton1 button.learn-more:hover .circle {
-  width: 100%;
-}
-
-#containerButton1 button.learn-more:hover .circle .icon.arrow {
-  background: #fff;
-  transform: translate(1rem, 0);
-}
-
-#containerButton1 button.learn-more:hover .button-text {
-  color: #fff;
-}
-
-
-
-#containerButton1 {
-  grid-area: main;
-  align-self: center;
-  justify-self: center;
-}
-
-
 
 /* HEAD */
 
@@ -180,6 +90,7 @@ h1 {
 
 .head-description {
   margin-top: 9rem;
+
   display: inline-flex;
   flex-direction: column;
   height: 5.125rem;
@@ -216,14 +127,12 @@ h1 {
   padding: 0rem 1.5rem;
   border: 3px solid #113b57;
   border-radius: 0.5rem;
-
 }
 
 /* Our Customers */
 .our-customers {
   margin: 25rem 0;
   text-align: center;
-  
 }
 
 h2 {
@@ -245,7 +154,6 @@ h2 {
   border: #17537a 0.5rem solid;
   border-radius: 2rem;
 }
-
 
 .customer-figure {
   display: flex;
@@ -539,14 +447,12 @@ input[type="number"]:focus {
   gap: 1.5rem;
 }
 
-
 .provisioning-total-price-container p {
   font-family: Inter;
   font-size: 10.75rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-
 }
 
 .confirm-button-container {
@@ -561,7 +467,6 @@ button {
 }
 
 .confirm-button-container button {
-
   font-family: Inter;
   font-size: 5rem;
   font-style: normal;
@@ -634,4 +539,78 @@ button {
   letter-spacing: 0.02625rem;
 
   border: none;
+}
+
+.dashbaored-container-server-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+
+  border: 2rem solid
+    (
+      --Linear-Gradient-Yellow-Red,
+      linear-gradient(88deg, #e9d022 -11.09%, #e60b09 122.28%)
+    );
+
+  font-size: 1.5rem;
+
+  width: 30%;
+  padding: 2rem;
+  background-color: white;
+
+  border-radius: 2rem;
+}
+
+.dashbaored-container-server-info p {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+}
+
+.dashbaored-container-server-info span {
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+}
+
+.dashbaored-container-server-info button {
+  display: inline-flex;
+  padding: 1rem 1.3125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+
+  background: var(
+    --Linear-Gradient-Yellow-Red,
+    linear-gradient(88deg, #e9d022 -11.09%, #e60b09 122.28%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.02625rem;
+
+  border: none;
+}
+
+.button-price {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.button-price:hover {
+  cursor: pointer;
 }

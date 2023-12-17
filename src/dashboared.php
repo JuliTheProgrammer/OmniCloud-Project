@@ -122,16 +122,36 @@ if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
         <h2 class="dashboared-title">My Dashboard</h2>
         <section class="dashboared-section-container">
           <div class="dashbaored-container">
-            <p>Server ID</p>
             <div class="dashbaored-container-server-info">
-              <!--diplay the for loop in the html-->
-              <?php 
-                //Loop through the data and make a reusable component
-                // Retrieve form data from cookie
-                // Retrieve form data from session
-                echo "<p>$formData = $_SESSION['form_data']</p>";
-                
-              ?>
+
+              <div class="server-price info-container">
+                <p>Total Server Price</p>
+                <span>45 CHF</span>
+              </div>
+
+              <div class="server-price info-container">
+                <p>
+                  CPU</p>
+                  <span>15 CHF</span>
+              </div>
+
+              <div class="server-price info-container">
+                <p>RAM</p>
+                <span>10 CHF</span>
+              </div>
+
+              <div class="server-price info-container">
+                <p>SSD</p>
+                <span>20 CHF</span>
+              </div>
+
+              <div class="button-price">
+              <button>
+                Delete Me
+              </button>
+              </div>
+              
+             
             </div>
           </div>
         </section>

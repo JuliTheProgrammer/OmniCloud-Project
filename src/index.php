@@ -51,30 +51,17 @@ $messages = array(
           <h1>OmniCloud</h1>
           <div class="head-description">
             <p>
-              Egal ob grosses Unternehmen oder kleines Start-up, OmniCloud bietet hochmoderne Cloud-Lösungen an, 
+            Egal ob grosses Unternehmen oder kleines Start-up, OmniCloud bietet hochmoderne Cloud-Lösungen an, 
               die vollständig an ihr Unternehmen angepasst werden können.
             </p>
-            <div id="containerButton1">
-            <a href="dashboared.php">
-            <button class="learn-more">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text">Dashboard</span>
-            </button>
-            </a>
-          </div>
-          </div>
-          <div id="containerButton1">
-            <a href="provisioning.php">
-            <button class="learn-more">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text">Start</span>
-            </button>
-            </a>
-          </div>
+            <div class="head-btn-container">
+              <a href="dashboared.php" class="l"
+                >Go to Dashboared</a
+              >
+              <a href="provisioning.php" class="btn-get-started"
+                >Get Started</a
+              >
+            </div>
           </div>
         </head>
         <section class="our-customers">
