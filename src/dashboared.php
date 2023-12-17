@@ -9,6 +9,7 @@ if (isset($_COOKIE['bookedServers'])) {
 }
 
 class bookedServerObject {
+  public $id;
   public $price;
   public $cpu;
   public $ram;
@@ -23,6 +24,7 @@ foreach ($bookedServers as $serverData) {
   $newServer->cpu = $serverData['cpu'];
   $newServer->ram = $serverData['ram'];
   $newServer->ssd = $serverData['ssd'];
+  $newServer->id = $serverData['id'];
   array_push($newArray, $newServer);
 }
 
@@ -76,6 +78,8 @@ function bookServer($server, $CPU, $RAM, $SSD) {
   $newServer->cpu = $CPU;
   $newServer->ram = $RAM;
   $newServer->ssd = $SSD;
+  $newServer->price = $CPU * 5 + $RAM * 5 + $SSD * 10;
+  $newServer->id = format_uuidv4(random_bytes(16));
 
   global $bookedServers;
   //Add the server to the booked servers
@@ -83,6 +87,17 @@ function bookServer($server, $CPU, $RAM, $SSD) {
 
   setcookie('bookedServers', json_encode($bookedServers), time()+3600);
 
+}
+
+
+function format_uuidv4($data)
+{
+  assert(strlen($data) == 16);
+
+  $data[6] = chr(ord($data[6]) & 0x0f | 0x40); // set version to 0100
+  $data[8] = chr(ord($data[8]) & 0x3f | 0x80); // set bits 6-7 to 10
+    
+  return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
 }
 
 $CPU = "";
@@ -119,6 +134,14 @@ if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
   bookServer($server1, $CPU, $RAM, $SSD); //Add server to the booked servers
 }
 }
+
+//Delte the server
+if (isset($_POST['delete'])) {
+      $btnValue = $_POST['btnValue']; 
+      $newArray = array_filter($newArray, function($server) use ($btnValue) {
+        return $server->id !== $btnValue;
+      });
+};
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -146,6 +169,8 @@ if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
                   $ssd = $server->ssd;
                   $totalPrice = $cpu * 5 + $ram * 5 + $ssd * 10;
 
+                  $id = $server->id;
+
                     echo '<div class="info-container">';
                     echo '<div class="server-price">';
                     echo '<p>Total Server Price</p>';
@@ -167,8 +192,13 @@ if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
                     echo '<span>' . $ssd . '</span>';
                     echo '</div>';
 
+                    echo '<div class="server-ssd">';
+                    echo '<p>Id</p>';
+                    echo '<span>' . $id . '</span>';
+                    echo '</div>';
+
                     echo '<div class="button-price">';
-                    echo '<button>Delete Me</button>';
+                    echo '<button type="delete" name="delete" value="delete"> Delete Me </button>';
                     echo '</div>';
 
                     echo '</div>';
