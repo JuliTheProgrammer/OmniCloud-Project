@@ -85,9 +85,8 @@ $ssdOptions = array(
                 </div>
                 
           </div>
-          
         <section>
-      <section class="provisioning-bottom-container">
+        <section class="provisioning-bottom-container">
       <div class="provisioning-total-price-container">
           <!-- <p><?php echo $totalPrice; ?> CHF</p> -->
       </div>
@@ -95,8 +94,7 @@ $ssdOptions = array(
         <button type="submit">Submit</button>
       </div>
       </form>
-    </section>
-       
+    </section>  
     </main>
   </body>
 </html>
