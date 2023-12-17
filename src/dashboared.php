@@ -1,9 +1,31 @@
 <!--Write PHP to make a reusable component-->
 <?php
 
-//Get the data from the global array
-global $bookedServers;
-$bookedServers = array();
+// Retrieve the bookedServers from cookies
+if (isset($_COOKIE['bookedServers'])) {
+  $bookedServers = json_decode($_COOKIE['bookedServers'], true);
+} else {
+  $bookedServers = [];
+}
+
+class bookedServerObject {
+  public $price;
+  public $cpu;
+  public $ram;
+  public $ssd;
+}
+
+$newArray = [];
+
+foreach ($bookedServers as $serverData) {
+  $newServer = new bookedServerObject();
+  $newServer->price = $serverData['price'];
+  $newServer->cpu = $serverData['cpu'];
+  $newServer->ram = $serverData['ram'];
+  $newServer->ssd = $serverData['ssd'];
+  array_push($newArray, $newServer);
+}
+
 
 //Make classes for each server
 
@@ -49,23 +71,19 @@ function bookServer($server, $CPU, $RAM, $SSD) {
   $server->ram = $server->ram - $RAM;
   $server->ssd = $server->ssd - $SSD; //The server is now booked
 
-  //Tessing if the values are being passed
-  echo $server->cpu;
-  echo $server->ram;
-  echo $server->ssd;
+  //Make new server Object
+  $newServer = new bookedServerObject();
+  $newServer->cpu = $CPU;
+  $newServer->ram = $RAM;
+  $newServer->ssd = $SSD;
 
-  // Start the session
-  session_start();
-  
-  // Store form data in session
-  $_SESSION['form_data'] = $server->cpu;
-  
-  
+  global $bookedServers;
+  //Add the server to the booked servers
+  array_push($bookedServers, $newServer);
+
+  setcookie('bookedServers', json_encode($bookedServers), time()+3600);
 
 }
-
-
-
 
 $CPU = "";
 $RAM = "";
@@ -75,34 +93,28 @@ if (isset($_POST['submit'])) {
   $CPU = $_POST['CPU'];
   $RAM = $_POST['RAM'];
   $SSD = $_POST['SSD'];
-  //Tesing if the values are being passed
-  echo "The values are being passed";
-  echo $CPU;
-  echo $RAM;
-  echo $SSD;
 
   //Create the booking process
 if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
   //Check for the other servers
   if ($CPU > $server2->cpu || $RAM > $server2->ram || $SSD > $server2->ssd) {
-    echo "Booking Big Boy Server";
+  
       //Make the booking process
       if ($CPU > $server3->cpu || $RAM > $server3->ram || $SSD > $server3->ssd) {
         echo "We don't have enough servers";
       } else {
-        echo "Booking Large Server";
+     
         //Make the booking process
         bookServer($server3, $CPU, $RAM, $SSD); //Add server to the booked servers
       }
 
   } else {
-    echo "Booking Medium Server";
+  
     //Make the booking process
     bookServer($server1, $CPU, $RAM, $SSD); //Add server to the booked servers
   }
 
 } else {
-  echo "Booking Small Server";
   //Making the booking process
   bookServer($server1, $CPU, $RAM, $SSD); //Add server to the booked servers
 }
@@ -124,35 +136,46 @@ if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
           <div class="dashbaored-container">
             <div class="dashbaored-container-server-info">
 
-              <div class="server-price info-container">
-                <p>Total Server Price</p>
-                <span>45 CHF</span>
-              </div>
+           
 
-              <div class="server-price info-container">
-                <p>
-                  CPU</p>
-                  <span>15 CHF</span>
-              </div>
+              <?php
+                foreach ($newArray as $server) {
 
-              <div class="server-price info-container">
-                <p>RAM</p>
-                <span>10 CHF</span>
-              </div>
+                  $cpu = $server->cpu;
+                  $ram = $server->ram;
+                  $ssd = $server->ssd;
+                  $totalPrice = $cpu * 5 + $ram * 5 + $ssd * 10;
 
-              <div class="server-price info-container">
-                <p>SSD</p>
-                <span>20 CHF</span>
-              </div>
+                    echo '<div class="info-container">';
+                    echo '<div class="server-price">';
+                    echo '<p>Total Server Price</p>';
+                    echo '<span>' . $totalPrice . '</span>';
+                    echo '</div>';
 
-              <div class="button-price">
-              <button>
-                Delete Me
-              </button>
-              </div>
-              
-             
-            </div>
+                    echo '<div class="server-cpu">';
+                    echo '<p>CPU</p>';
+                    echo '<span>' . $cpu . '</span>';
+                    echo '</div>';
+
+                    echo '<div class="server-ram ">';
+                    echo '<p>RAM</p>';
+                    echo '<span>' .$ram . '</span>';
+                    echo '</div>';
+
+                    echo '<div class="server-ssd">';
+                    echo '<p>SSD</p>';
+                    echo '<span>' . $ssd . '</span>';
+                    echo '</div>';
+
+                    echo '<div class="button-price">';
+                    echo '<button>Delete Me</button>';
+                    echo '</div>';
+
+                    echo '</div>';
+                }
+              ?>
+    
+            
           </div>
         </section>
       </div>
