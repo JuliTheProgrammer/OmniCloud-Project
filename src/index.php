@@ -49,7 +49,7 @@ $messages = array(
         <li><img src="logos/omnicloud_logo.png" alt="omnicloud" class="logo"></li>
         <li><a href="index.php">Home</a></li>
         <li><a href="provisioning.php">Dienste</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="kontakt.php">Kontakt</a></li>
         <li><a href="admin.php">Admin</a></li>
       </ul>
     </nav>
