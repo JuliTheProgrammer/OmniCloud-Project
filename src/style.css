@@ -127,14 +127,12 @@ h1 {
   padding: 0rem 1.5rem;
   border: 3px solid #113b57;
   border-radius: 0.5rem;
-
 }
 
 /* Our Customers */
 .our-customers {
   margin: 25rem 0;
   text-align: center;
-  
 }
 
 h2 {
@@ -156,7 +154,6 @@ h2 {
   border: #17537a 0.5rem solid;
   border-radius: 2rem;
 }
-
 
 .customer-figure {
   display: flex;
@@ -450,14 +447,12 @@ input[type="number"]:focus {
   gap: 1.5rem;
 }
 
-
 .provisioning-total-price-container p {
   font-family: Inter;
   font-size: 10.75rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-
 }
 
 .confirm-button-container {
@@ -472,7 +467,6 @@ button {
 }
 
 .confirm-button-container button {
-
   font-family: Inter;
   font-size: 5rem;
   font-style: normal;
@@ -545,4 +539,78 @@ button {
   letter-spacing: 0.02625rem;
 
   border: none;
+}
+
+.dashbaored-container-server-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+
+  border: 2rem solid
+    (
+      --Linear-Gradient-Yellow-Red,
+      linear-gradient(88deg, #e9d022 -11.09%, #e60b09 122.28%)
+    );
+
+  font-size: 1.5rem;
+
+  width: 30%;
+  padding: 2rem;
+  background-color: white;
+
+  border-radius: 2rem;
+}
+
+.dashbaored-container-server-info p {
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+}
+
+.dashbaored-container-server-info span {
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.0375rem;
+}
+
+.dashbaored-container-server-info button {
+  display: inline-flex;
+  padding: 1rem 1.3125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+
+  background: var(
+    --Linear-Gradient-Yellow-Red,
+    linear-gradient(88deg, #e9d022 -11.09%, #e60b09 122.28%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.02625rem;
+
+  border: none;
+}
+
+.button-price {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.button-price:hover {
+  cursor: pointer;
 }
