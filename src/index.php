@@ -42,6 +42,7 @@ $messages = array(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="logos/omnicloud_logo.png" type="image/x-icon">
   </head>
   <body>
   <nav>
@@ -49,7 +50,7 @@ $messages = array(
         <li><img src="logos/omnicloud_logo.png" alt="omnicloud" class="logo"></li>
         <li><a href="index.php">Home</a></li>
         <li><a href="provisioning.php">Dienste</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="kontakt.php">Kontakt</a></li>
         <li><a href="admin.php">Admin</a></li>
       </ul>
     </nav>
@@ -176,7 +177,7 @@ $messages = array(
     <div class="footer-content">
       <p>Copyright &copy; 2023 OmniCloud AG</p>
       <ul>
-        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="kontakt.php">Kontakt</a></li>
         <li><a href="impressum.html">Impressum</a></li>
       </ul>
     </div>
