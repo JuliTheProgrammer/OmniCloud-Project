@@ -25,9 +25,9 @@ $images = array(
 );
 
 $messages = array(
-  "Google" => "The best cloud service provider to host our Indian Call Centers.",
-  "Meta" => "I hope they don't steal my data.",
-  "X" => "Freedom of speech is a human right.",
+  "Google" => "OmniCloud hebt mit maßgeschneiderten Cloud-Lösungen unsere Effizienz auf ein neues Level.",
+  "Meta" => "OmniCloud bietet uns die Flexibilität und Skalierbarkeit, die für die digitale Welt entscheidend sind.",
+  "X" => "OmniCloud revolutioniert unsere Cloud-Strategie und trägt maßgeblich zu unserem Erfolg bei.",
 );
 
 ?>
@@ -51,25 +51,34 @@ $messages = array(
           <h1>OmniCloud</h1>
           <div class="head-description">
             <p>
-              Lorem ipsum dolor sit amet consectetur. Morbi sed maecenas dui in
-              nullam sed neque. Ornare porttitor nunc elementum cum quis tellus
-              metus. Et egestas a turpis sed platea.
+              Egal ob grosses Unternehmen oder kleines Start-up, OmniCloud bietet hochmoderne Cloud-Lösungen an, 
+              die vollständig an ihr Unternehmen angepasst werden können.
             </p>
-            <div class="head-btn-container">
-              <a href="dashboared.php" class="l"
-                >Go to Dashboared</a
-              >
-              <div class="provisioning-container">
-                <a href="provisioning.php" class="btn-get-started"
-                  >Get Started</a
-                >
-              </div>
-            </div>
+            <div id="containerButton1">
+            <a href="dashboared.php">
+            <button class="learn-more">
+              <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Dashboard</span>
+            </button>
+            </a>
+          </div>
+          </div>
+          <div id="containerButton1">
+            <a href="provisioning.php">
+            <button class="learn-more">
+              <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">Start</span>
+            </button>
+            </a>
+          </div>
           </div>
         </head>
         <section class="our-customers">
-          <div class="our-customers-container">
-          <h2>Our Customers</h2>
+          <h2>Unsere Kunden</h2>
           <div class="customer-figures">
             
               <?php 
@@ -87,14 +96,14 @@ $messages = array(
          
         </section>
         <section class="our-services">
-          <h2>Our Services</h2>
+          <h2>Unsere Services</h2>
           <div class="our-services-container">
             <div class="our-services-description">
               <p>
-                Lorem ipsum dolor sit amet consectetur. Proin at id lectus
-                sagittis gravida tellus. Nulla egestas a amet lacus. Nec
-                dignissim eget non quis ac aliquam orci. Aliquam amet
-                pellentesque tempor ac mauris.
+              Entdecken Sie die Zukunft der IT-Infrastruktur mit unseren innovativen IaaS-Lösungen. 
+              Wir präsentieren wir leistungsstarke, 
+              flexible und skalierbare Infrastrukturdienste, 
+              die Ihr Unternehmen auf die nächste Stufe heben.
               </p>
             </div>
             <div class="our-services-IaaS-container">
@@ -104,14 +113,13 @@ $messages = array(
           </div>
         </section>
         <section class="our-prices">
-          <h2>Our Prices</h2>
+          <h2>Preise</h2>
           <div class="our-prices-container">
             <div class="our-prices-description">
               <p>
-                Lorem ipsum dolor sit amet consectetur. Egestas pulvinar varius
-                dui a quis proin ipsum consequat eu. Ut sed quis faucibus urna
-                massa laoreet nisl laoreet. Maecenas eget faucibus eget ac. In
-                aliquet placerat.
+              Sichern Sie sich klare Preise und maximale Flexibilität.
+              Gestalten Sie Ihre Ressourcen nach Bedarf und erleben Sie
+              den einfachen Weg zu kosteneffizienter Innovation.
               </p>
             </div>
             <div class="our-prices-calculater">
@@ -156,7 +164,7 @@ $messages = array(
           </div>
         </section>
         <div class="cta-button-container">
-          <a href="provisioning.php" class="cta-button">Get Started</a>
+          <a href="provisioning.php" class="cta-button">Leg Los!</a>
         </div>
       </div>
     </main>
