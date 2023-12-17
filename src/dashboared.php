@@ -67,11 +67,20 @@ $server3->cpu = 12;
 $server3->ram = 32;
 $server3->ssd = 400;
 
+$CPU = "";
+$RAM = "";
+$SSD = "";
 
 function bookServer($server, $CPU, $RAM, $SSD) {
-  $server->cpu = $server->cpu - $CPU;
-  $server->ram = $server->ram - $RAM;
-  $server->ssd = $server->ssd - $SSD; //The server is now booked
+  //Make error message
+  if ($CPU > $server->cpu || $RAM > $server->ram || $SSD > $server->ssd) {
+    $server->cpu = $server->cpu - $CPU;
+    $server->ram = $server->ram - $RAM;
+    $server->ssd = $server->ssd - $SSD; //The server is now booked
+  
+  } else {
+    echo "We don't have enough servers";
+  }
 
   //Make new server Object
   $newServer = new bookedServerObject();
@@ -87,6 +96,10 @@ function bookServer($server, $CPU, $RAM, $SSD) {
 
   setcookie('bookedServers', json_encode($bookedServers), time()+3600);
 
+  $CPU = "";
+  $RAM = "";
+  $SSD = "";
+
 }
 
 
@@ -100,14 +113,21 @@ function format_uuidv4($data)
   return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
 }
 
-$CPU = "";
-$RAM = "";
-$SSD = "";
+
 
 if (isset($_POST['submit'])) {
+  $CPU = "";
+  $RAM = "";
+  $SSD = "";
+
   $CPU = $_POST['CPU'];
   $RAM = $_POST['RAM'];
   $SSD = $_POST['SSD'];
+
+  //COnvert CPU to Int
+  $CPU = (int)$CPU;
+  $RAM = (int)$RAM;
+  $SSD = (int)$SSD;
 
   //Create the booking process
 if ($CPU > $server1->cpu || $RAM > $server1->ram || $SSD > $server1->ssd) {
