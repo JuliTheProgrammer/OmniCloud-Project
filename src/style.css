@@ -6,12 +6,92 @@
 }
 
 body {
-  background-color: #bcd6e7;
+  background-color: white;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #17537a;
+  color: #333;
+  padding-top: 60px;
 }
+
+.logo {
+  height: 60px; /* Adjust this value to your liking */
+  margin-right: 20px;
+}
+
+h1 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 20rem;
+  color : #333;
+}
+
+nav {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content ul {
+  list-style-type: none;
+}
+
+.footer-content li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: #ddd;
+}
+
 
 .container {
   max-width: 1400px;
@@ -71,6 +151,7 @@ a {
       linear-gradient(88deg, #e9d022 -11.09%, #e60b09 122.28%)
     );
 }
+
 
 /* HEAD */
 
@@ -361,26 +442,6 @@ input[type="number"]:focus {
   cursor: pointer;
 }
 
-/* CTA button */
-
-.cta-button-container {
-  margin: 30rem 0rem;
-}
-
-.cta-button {
-  font-size: 10rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0.02625rem;
-  background: var(
-    --Linear-Gradient-Yellow-Red,
-    linear-gradient(88deg, #e9d022 -11.09%, #e60b09 122.28%)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /*Provisioning*/
 
@@ -455,12 +516,6 @@ input[type="number"]:focus {
   line-height: normal;
 }
 
-.confirm-button-container {
-  display: inline-block;
-  text-align: center;
-  margin: 3rem 0rem;
-  border: none;
-}
 
 button {
   all: unset;
@@ -614,3 +669,4 @@ button {
 .button-price:hover {
   cursor: pointer;
 }
+
