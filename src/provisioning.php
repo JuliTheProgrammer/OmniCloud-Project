@@ -95,7 +95,7 @@ $ssdOptions = array(
           <!-- <p><?php echo $totalPrice; ?> CHF</p> -->
       </div>
       <div class="confirm-button-container">
-        <button type="submit">Submit</button>
+        <button type="submit" name="submit" value="submit">Submit</button>
       </div>
       </form>
     </section>  
