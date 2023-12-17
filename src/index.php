@@ -38,13 +38,21 @@ $messages = array(
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css"<?php echo time(); ?>" />
-    <title>Document</title>
-
+    <title>Cloud-Dienste | OmniCloud</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   </head>
   <body>
+  <nav>
+      <ul>
+        <li><img src="logos/omnicloud_logo.png" alt="omnicloud" class="logo"></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="provisioning.php">Dienste</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="admin.php">Admin</a></li>
+      </ul>
+    </nav>
     <main class="container">
       <div class="container-margin">
         <head>
@@ -54,14 +62,8 @@ $messages = array(
             Egal ob grosses Unternehmen oder kleines Start-up, OmniCloud bietet hochmoderne Cloud-Lösungen an, 
               die vollständig an ihr Unternehmen angepasst werden können.
             </p>
-            <div class="head-btn-container">
-              <a href="dashboared.php" class="l"
-                >Go to Dashboared</a
-              >
-              <a href="provisioning.php" class="btn-get-started"
-                >Get Started</a
-              >
-            </div>
+            <a href="dashboared.php" class="button">Dashboard</a>
+            <a href="provisioning.php" class="button">Start</a>
           </div>
         </head>
         <section class="our-customers">
@@ -114,46 +116,70 @@ $messages = array(
                 <!--First Text Field-->
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
-                    <label>CPU</label>
-                    <input type="number" name="CPU" placeholder="1" min=1 max=2/>
+                  <label>CPU</label>
+                  <select name="CPU" onchange="calculatePrice()">
+                    <option value="5">1 Core - CHF 5.-</option>
+                    <option value="10">2 Cores- CHF 10.-</option>
+                    <option value="18">4 Cores - CHF 18.-</option>
+                    <option value="30">8 Cores - CHF 30.-</option>
+                    <option value="45">16 Cores - CHF 45.-</option>
+                  </select>
                   </div>
                   <p>5 CHF / Core</p>
                 </div>
                 <!--Second Text Field-->
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
-                    <label>RAM</label>
-                    <input type="number" name="RAM" placeholder="1" min=1 max=2/>
+                  <label>RAM</label>
+                  <select name="RAM" onchange="calculatePrice()">
+                    <option value="5">512 MB - 5 CHF.-</option>
+                    <option value="10">1024 MB - CHF 10.-</option>
+                    <option value="20">2048 MB - CHF 20.-</option>
+                    <option value="40">4096 MB - CHF 40.-</option>
+                    <option value="80">8192 MB - CHF 80.-</option>
+                    <option value="160">16384 MB - CHF 160.-</option>
+                    <option value="320">32768 MB - CHF 320.-</option>
+                  </select>
                   </div>
-                  <p>5 CHF / Core</p>
+                  <p>5 CHF / 512MB</p>
                 </div>
                 <!--Third Text Field-->
                 <div class="our-prices-text-field">
                   <div class="our-prices-text-field-container">
                     <label>SSD</label>
-                    <input type="number" name="SSD" placeholder="1" min=1 max=2 />
+                    <select name="SSD" onchange="calculatePrice()">
+                      <option value="5">10 GB - CHF 5.-</option>
+                      <option value="10">20 GB - CHF 10.-</option>
+                      <option value="20">40 GB - CHF 20.-</option>
+                      <option value="40">80 GB - CHF 40.-</option>
+                      <option value="120">240 GB - CHF 120.-</option>
+                      <option value="250">500 GB - CHF 250.-</option>
+                    </select>
                   </div>
-                  <p>5 CHF / Core</p>
-                </div>
-                <!--Submit Button-->
-                <div>
-                  <input class="our-prices-submit-button" type="submit" name="Calculate">
-                  </input>
+                  <p>5 CHF / 10GB</p>
                 </div>
               </form>
               <div class="our-prices-charge">
                 <p>
                 <?php echo $totalPrice ?>
-                .-
+                .- 
               </p>
               </div>
             </div>
           </div>
         </section>
-        <div class="cta-button-container">
-          <a href="provisioning.php" class="cta-button">Leg Los!</a>
-        </div>
       </div>
     </main>
+    <script src="script.js"></script>
+    
+    <footer>
+    <div class="footer-content">
+      <p>Copyright &copy; 2023 OmniCloud AG</p>
+      <ul>
+        <li><a href="#contact">Kontakt</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+      </ul>
+    </div>
+</footer>
   </body>
 </html>
